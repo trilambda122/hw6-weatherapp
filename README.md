@@ -2,31 +2,31 @@
 
 
 ### Functionality 
- -[ ] Ability to search for a city
-   -[ ] current and future conditions
-     -[ ] ELEMENTS to RETURN
-       -[X]  city name, [name]
-       -[X]  the date,  [dt] will also need [timezone]
-       -[ ]  description, [weather[0].description]
-       -[ ]  coord lon and lat *will need these for future lookups* [coord.lat] [coord.lon]
-       -[ ]  an icon representation of weather conditions, [weather[0].icon]
-       -[X]  the temperature, [main.temp]
-       -[X]  the humidity, [main.humidity]
-       -[X]  the wind speed, [wind.speed]
-       -[]  and the UV index *will need lat and long for city* [coord.lat,coord.lon] *will return* [value]
-    -[ ]  Each element should be color coded 
-       -[ ]   favorable, 
-       -[ ]   moderate, 
-       -[ ]   or severe
-   -[ ] save city to the a search history
-     -[ ] presented with current and future conditions for that city
-   -[ ] Display 5 day forcast *will need lon,lag will return as an array for 7 days*
-     -[ ] displays the date, -[ ] [daily[0].dt]
-     -[ ] an icon representation of weather conditions, [daily[0].weather[0].icon]
-     -[ ] the temperature, [daily[0].temp.day]
-     -[ ] and the humidity [daily[0].humidity]
-   -[ ] on open
-     -[ ] present last searched city forecast
+ - [ ] Ability to search for a city
+   - [ ] current and future conditions
+     - [ ] ELEMENTS to RETURN
+       - [X]  city name, [name]
+       - [X]  the date,  [dt] will also need [timezone]
+       - [ ]  description, [weather[0].description]
+       - [ ]  coord lon and lat *will need these for future lookups* [coord.lat] [coord.lon]
+       - [ ]  an icon representation of weather conditions, [weather[0].icon]
+       - [X]  the temperature, [main.temp]
+       - [X]  the humidity, [main.humidity]
+       - [X]  the wind speed, [wind.speed]
+       - []  and the UV index *will need lat and long for city* [coord.lat,coord.lon] *will return* [value]
+    - [ ]  Each element should be color coded 
+       - [ ]   favorable, 
+       - [ ]   moderate, 
+       - [ ]   or severe
+   - [ ] save city to the a search history
+     - [ ] presented with current and future conditions for that city
+   - [ ] Display 5 day forcast *will need lon,lag will return as an array for 7 days*
+     - [ ] displays the date, - [ ] [daily[0].dt]
+     - [ ] an icon representation of weather conditions, [daily[0].weather[0].icon]
+     - [ ] the temperature, [daily[0].temp.day]
+     - [ ] and the humidity [daily[0].humidity]
+   - [ ] on open
+     - [ ] present last searched city forecast
 
 *use moment.js for current date and time formating*
 ---
