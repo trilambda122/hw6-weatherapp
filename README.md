@@ -1,32 +1,32 @@
 # hw6-weather_app
 
 #### BUGS
-- [ ] side bar list of cityies does not popule new cities after 5. this is because we are taking the first 5 elements in the array and not the last five. 
+- [X] side bar list of cityies does not popule new cities after 5. this is because we are taking the first 5 elements in the array and not the last five. 
 - [ ] Onclick listners work when pages loads, but stop working once a search has been done. when the sidebar is refesh and repopulated from a search it seems that the listen event is removed. 
 ### Functionality 
- - [ ] Ability to search for a city
-   - [ ] current and future conditions
-     - [ ] ELEMENTS to RETURN
+ - [X] Ability to search for a city
+   - [X] current and future conditions
+     - [X] ELEMENTS to RETURN
        - [X]  city name, [name]
        - [X]  the date,  [dt] will also need [timezone]
-       - [ ]  description, [weather[0].description]
-       - [ ]  coord lon and lat *will need these for future lookups* [coord.lat] [coord.lon]
-       - [ ]  an icon representation of weather conditions, [weather[0].icon]
+       - [X]  description, [weather[0].description]
+       - [X]  coord lon and lat *will need these for future lookups* [coord.lat] [coord.lon]
+       - [X]  an icon representation of weather conditions, [weather[0].icon]
        - [X]  the temperature, [main.temp]
        - [X]  the humidity, [main.humidity]
        - [X]  the wind speed, [wind.speed]
-       - []  and the UV index *will need lat and long for city* [coord.lat,coord.lon] *will return* [value]
+       - [X]  and the UV index *will need lat and long for city* [coord.lat,coord.lon] *will return* [value]
     - [ ]  Each element should be color coded 
        - [ ]   favorable, 
        - [ ]   moderate, 
        - [ ]   or severe
-   - [ ] save city to the a search history
-     - [ ] presented with current and future conditions for that city
+   - [X] save city to the a search history
+     - [X] presented with current and future conditions for that city
    - [ ] Display 5 day forcast *will need lon,lag will return as an array for 7 days*
-     - [ ] displays the date, - [ ] [daily[0].dt]
-     - [ ] an icon representation of weather conditions, [daily[0].weather[0].icon] 
-     - [ ] the temperature, [daily[0].temp.day]
-     - [ ] and the humidity [daily[0].humidity]
+     - [X] displays the date, - [ ] [daily[0].dt]
+     - [X] an icon representation of weather conditions, [daily[0].weather[0].icon] 
+     - [X] the temperature, [daily[0].temp.day]
+     - [X] and the humidity [daily[0].humidity]
    - [ ] on open
      - [ ] present last searched city forecast
 

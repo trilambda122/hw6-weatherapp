@@ -10,18 +10,17 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">WEATHER APP</a>
     </nav>
 
     <!-- CONTENT WRAPPER -->
     <div class="row">
         <!-- SIDEBAR  AREA -->
-        <div class="col-3 border border-primary">
-
+        <div class="col-3 ">
+            <h3>Search for a city</h3>
             <!-- area for seach box and button -->
             <div class="input-group mb-3">
-
                 <input type="text" class="form-control" placeholder="City" aria-label="Username" aria-describedby="basic-addon1" id="city-search-text">
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-search-location" id="search-button"></i></span>
@@ -36,40 +35,41 @@
         <!-- END SIDE BAR AREA   -->
 
         <!-- MAIN AREA OF PAGE THAT SITS BESIDE THE SIDEBAR -->
-        <div class="col-9 border border-primary">
+        <div class="col-9 ">
             <!-- this row is what creates the main area for content -->
             <div class="row"></div>
             <!-- this column spans the main content area -->
-            <div class="col-10  border border-primary">
-                <div class="jumbotron">
+            <div class="col-10  ">
+                <div class="jumbotron shadow-lg p-3 mb-5 bg-white rounded">
                     <!-- row for city and date -->
                     <div class="row">
-                        <h1 class="display-6" id="city-location">
+                        <h1 class="display-1 m-2 mr-6" id="city-location">
                         </h1>
-                        <p class="badge badge-primary m-2 h-50" id="current-date"></p>
-                        <i id="weather-icon"></i>
+                        <h2 class="m-2"><span class="badge badge-secondary" id="current-date"></span></h2>
+                        <i class="m-2" id="weather-icon"></i>
                     </div>
-                    <div class="lead" id="weather-desc"></div>
+                    <hr class="my-4">
+                    <div class="lead display-4" id="weather-desc"></div>
                     <hr class="my-4">
                     <!-- row for tempature -->
                     <div class="row">
-                        <h6 class="m-2">Tempature: </h6>
-                        <p class="badge badge-primary m-2" id="current-temp"></p>
+                        <h4 class="m-2">Tempature: </h4>
+                        <h4 class="m-2"><span class="badge badge-secondary" id="current-temp"></span></h4>
                     </div>
                     <!-- row for humidity -->
                     <div class="row">
-                        <h6 class="m-2">Humidity: </h6>
-                        <p class="badge badge-primary m-2" id="current-humidity"></p>
+                        <h4 class="m-2">Humidity: </h4>
+                        <h4 class="m-2"> <span class="badge badge-secondary" id="current-humidity"></span></h4>
                     </div>
                     <!--  row for windspeed -->
                     <div class="row">
-                        <h6 class="m-2">Windspeed: </h6>
-                        <p class="badge badge-primary m-2" id="current-windspeed"></p>
+                        <h4 class="m-2">Windspeed: </h4>
+                        <h4 class="m-2"><span class="badge badge-secondary" id="current-windspeed"></span></h4>
                     </div>
                     <!--  row forUV index -->
                     <div class="row">
-                        <h6 class="m-2">UV INDEX: </h6>
-                        <p class="badge badge-primary m-2" id="current-uv"></p>
+                        <h4 class="m-2">UV INDEX: </h4>
+                        <h4 class="m-2"><span class="badge badge-secondary" id="current-uv"></span></h4>
                     </div>
 
 
@@ -79,43 +79,10 @@
 
             </div>
             <!-- 5 DAY FORCAST AREA-->
-            <div class="col-12  border border-primary">
+            <div class="col-12  ">
                 <div class="row" id="five-day-forcast-row">
-                    <!-- <div class="card col-2">
-                        <div class="card-body ">
-                            <p class="badge badge-primary m-2 h-25"> 01/01/1984</p>
-                            <i class="fas fa-cloud-sun-rain fa-2x"></i>
-                            <p>TEMP:</p>
-                            <p>Humidity</p>
-                        </div>
-                    </div>
 
-                    <div class="card col-2">
-                        <div class="card-body ">
-                            <p>DAY 2</p>
-                        </div>
-                    </div>
-
-                    <div class="card col-2">
-                        <div class="card-body ">
-                            <p>DAY 3</p>
-                        </div>
-                    </div>
-
-                    <div class="card col-2">
-                        <div class="card-body ">
-                            <p>DAY 4</p>
-                        </div>
-                    </div>
-
-                    <div class="card col-2">
-                        <div class="card-body ">
-                            <p>DAY 5</p>
-                        </div>
-                    </div>
-
-                </div> -->
-                    <!--  END 5 DAY FORCAST AREA-->
+                    <!-- content here will be generated in script -->
 
                 </div>
             </div>

@@ -35,7 +35,11 @@ $(document).ready(function() {
             // add the city to local storage and limit the storage to 5 cities
             if (!cityListStorage.includes(city)) {
                 cityListStorage.push(city);
-                cityListStorage.splice(5);
+                // check length of sotrage array and tirm down to last 5 entries 
+                if (cityListStorage.length > 5) {
+                    cityListStorage.splice(-6, 1);
+                }
+
                 localStorage.setItem("cityList", JSON.stringify(cityListStorage));
             }
 
@@ -121,15 +125,22 @@ $(document).ready(function() {
                 var humidity = fiveDayArr[i].humidity;
                 var fiveDayIconURL = `http://openweathermap.org/img/w/${fiveDayArr[i].weather[0].icon}.png`;
                 // create code block for the cards that will hold the forcast summary
-                var codeBlock = ` <div class="card col-2">
-                <div class="card-body ">
-                    <p class="badge badge-primary m-2 h-25">${dtStr}</p>
-                    <img src="${fiveDayIconURL}">
-                    <p>TEMP: ${temp}</p>
-                    <p>Humidity: ${humidity}</p>
+                var codeBlock = ` <div class="card shadow-lg p-3 mb-5 bg-white rounded col-md-2">
+                <div class="card-header">
+                <h3 class="">${dtStr}</h3>
+                
+                </div>
+                <div class="card-body">
+                <img src="${fiveDayIconURL}"  alt="...">
+                  
+            
+                <h6>Temp: ${temp}</h6>
+                    <h6>Humidity: ${humidity}</h6>
                 </div>
             </div>`
-                    // append code block to the page
+
+                // <img src="${fiveDayIconURL}">
+                // append code block to the page
                 $("#five-day-forcast-row").append(codeBlock);
             }
         }
