@@ -1,5 +1,5 @@
 # hw6-weather_app
-SITE is Located here: ![Shane's weather app](https://trilambda122.github.io/hw6-weatherapp/)
+SITE is Located here: [Shane's weather app](https://trilambda122.github.io/hw6-weatherapp/)
 #### BUGS
 - [X] side bar list of cityies does not popule new cities after 5. this is because we are taking the first 5 elements in the array and not the last five. 
 - [ ] Onclick listners work when pages loads, but stop working once a search has been done. when the sidebar is refesh and repopulated from a search it seems that the listen event is removed. 
