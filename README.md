@@ -1,6 +1,8 @@
 # hw6-weather_app
 
-
+#### BUGS
+- [ ] side bar list of cityies does not popule new cities after 5. this is because we are taking the first 5 elements in the array and not the last five. 
+- [ ] Onclick listners work when pages loads, but stop working once a search has been done. when the sidebar is refesh and repopulated from a search it seems that the listen event is removed. 
 ### Functionality 
  - [ ] Ability to search for a city
    - [ ] current and future conditions
@@ -22,7 +24,7 @@
      - [ ] presented with current and future conditions for that city
    - [ ] Display 5 day forcast *will need lon,lag will return as an array for 7 days*
      - [ ] displays the date, - [ ] [daily[0].dt]
-     - [ ] an icon representation of weather conditions, [daily[0].weather[0].icon]
+     - [ ] an icon representation of weather conditions, [daily[0].weather[0].icon] 
      - [ ] the temperature, [daily[0].temp.day]
      - [ ] and the humidity [daily[0].humidity]
    - [ ] on open
@@ -48,6 +50,7 @@
 #weather-icon
 #side-bar-list
 #weather-desc
+#five-day-forcast-row
 
 
 ### API SECTION

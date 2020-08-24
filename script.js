@@ -65,6 +65,7 @@ $(document).ready(function() {
         $("#side-bar-list").html("");
         cityListStorage.forEach(function(item) {
             $("#side-bar-list").append(`<li class="list-group-item side-bar-city"> ${item} </li>`)
+
         });
 
     }
@@ -87,7 +88,7 @@ $(document).ready(function() {
             lat = response.coord.lat;
             desc = response.weather[0].description;
             var iconURL = `http://openweathermap.org/img/w/${response.weather[0].icon}.png`;
-            var oneCallWeatherURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=${excludeList}&appid=${API_KEY}`;
+            var oneCallWeatherURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=${excludeList}&units=imperial&appid=${API_KEY}`;
 
             // use the lon and lat to get the 5 days of forcasted weather  
             $.ajax({
@@ -96,7 +97,10 @@ $(document).ready(function() {
             }).then(function(oneCallObj) {
 
                 uv = oneCallObj.current.uvi;
-                // call function to display all these vars to the page. 
+                //  pass aray to function for the 5 day forcast
+                displayFiveDay(oneCallObj.daily);
+
+
                 displayCurrentWeather(city, temp, humidity, wind, uv, iconURL, desc);
             });
 
@@ -105,10 +109,32 @@ $(document).ready(function() {
 
 
         });
+        //  function to create the 5 day forcast card by looping through an array of objects that have the forcast for each day
+        function displayFiveDay(fiveDayArr) {
+            console.log(fiveDayArr);
+            $("#five-day-forcast-row").html("");
+            //  use for loop to target the next 5 days. start the array at i=1 to target tomorrow and stop at the 2 last element in the array (array has 7 days in it)
+            for (i = 1; i < fiveDayArr.length - 2; i++) {
+                var dtObj = moment.unix(fiveDayArr[i].dt);
+                var dtStr = dtObj.format("MMM D");
+                var temp = fiveDayArr[i].temp.day;
+                var humidity = fiveDayArr[i].humidity;
+                var fiveDayIconURL = `http://openweathermap.org/img/w/${fiveDayArr[i].weather[0].icon}.png`;
+                // create code block for the cards that will hold the forcast summary
+                var codeBlock = ` <div class="card col-2">
+                <div class="card-body ">
+                    <p class="badge badge-primary m-2 h-25">${dtStr}</p>
+                    <img src="${fiveDayIconURL}">
+                    <p>TEMP: ${temp}</p>
+                    <p>Humidity: ${humidity}</p>
+                </div>
+            </div>`
+                    // append code block to the page
+                $("#five-day-forcast-row").append(codeBlock);
+            }
+        }
 
         function displayCurrentWeather(city, temp, humidity, wind, uv, iconURL, desc) {
-
-
             $("#city-location").text(city);
             $("#current-temp").text(temp);
             $("#current-humidity").text(humidity);
