@@ -104,8 +104,8 @@ $(document).ready(function() {
                 //  pass aray to function for the 5 day forcast
                 displayFiveDay(oneCallObj.daily);
 
-
-                displayCurrentWeather(city, temp, humidity, wind, uv, iconURL, desc);
+                var uvColor = uvRating(uv);
+                displayCurrentWeather(city, temp, humidity, wind, uv, uvColor, iconURL, desc);
             });
 
 
@@ -145,17 +145,39 @@ $(document).ready(function() {
             }
         }
 
-        function displayCurrentWeather(city, temp, humidity, wind, uv, iconURL, desc) {
+        function displayCurrentWeather(city, temp, humidity, wind, uv, uvColor, iconURL, desc) {
+
             $("#city-location").text(city);
             $("#current-temp").text(temp);
             $("#current-humidity").text(humidity);
             $("#current-windspeed").text(wind);
             $("#current-uv").text(uv);
+            $("#current-uv").addClass(uvColor);
+
             $("#weather-icon").html(`<img src="${iconURL}">`);
             $("#weather-desc").html(`<p>${desc}</p>`);
 
         }
 
+        function uvRating(uv) {
+            var badgeColor = "";
+
+            console.log(uv);
+            console.log(typeof(uv));
+            if (uv >= 0 && uv < 3) {
+                badgeColor = "badge badge-success"
+            } else if (uv >= 3 && uv < 6) {
+                badgeColor = "badge badge-warning"
+            } else if (uv >= 6 && uv < 8) {
+                badgeColor = "badge badge-secondary"
+            } else if (uv >= 8 && uv < 11) {
+                badgeColor = "badge badge-danger"
+            } else if (uv > 11) {
+                badgeColor = "badge badge-dark"
+            } else { console.log("something went wrong"); }
+            console.log(badgeColor);
+            return badgeColor;
+        }
 
     }
 
