@@ -45,8 +45,12 @@ SITE is Located here: [Shane's weather app](https://trilambda122.github.io/hw6-w
 | 11+   | Violet | Extreme     | badge badge-dark      | *over written in CSS for background purple
 
 **LAYOUT**
-
+Inital rough of layout
 ![Layout inital draft](Rough_Layout_Draft.png)
+
+
+Screen shot of final layout
+![Screenshot of final app](Final_layout.png)
 
 
 **SELECTORS**
