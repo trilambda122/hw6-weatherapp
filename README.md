@@ -33,6 +33,17 @@ SITE is Located here: [Shane's weather app](https://trilambda122.github.io/hw6-w
 *use moment.js for current date and time formating*
 ---
 
+
+**UV SCALE**
+
+| Range | Color  | Description | BootStrap Class       |
+|-------|--------|-------------|-----------------------|
+| 0-2   | Green  | Low         | badge badge-success   |
+| 3-5   | Yellow | Moderate    | badge badge-warning   |
+| 6-7   | Orange | High        | badge badge-secondary | *over written in CSS for background orangered
+| 8-10  | Red    | Very High   | badge badge-danger    |
+| 11+   | Violet | Extreme     | badge badge-dark      | *over written in CSS for background purple
+
 **LAYOUT**
 
 ![Layout inital draft](Rough_Layout_Draft.png)
