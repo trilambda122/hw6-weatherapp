@@ -16,13 +16,13 @@ SITE is Located here: [Shane's weather app](https://trilambda122.github.io/hw6-w
        - [X]  the humidity, [main.humidity]
        - [X]  the wind speed, [wind.speed]
        - [X]  and the UV index *will need lat and long for city* [coord.lat,coord.lon] *will return* [value]
-    - [ ]  Each element should be color coded 
-       - [ ]   favorable, 
-       - [ ]   moderate, 
-       - [ ]   or severe
+    - [X]  Each element should be color coded 
+       - [X]   favorable, 
+       - [X]   moderate, 
+       - [X]   or severe
    - [X] save city to the a search history
      - [X] presented with current and future conditions for that city
-   - [ ] Display 5 day forcast *will need lon,lag will return as an array for 7 days*
+   - [X] Display 5 day forcast *will need lon,lag will return as an array for 7 days*
      - [X] displays the date, - [ ] [daily[0].dt]
      - [X] an icon representation of weather conditions, [daily[0].weather[0].icon] 
      - [X] the temperature, [daily[0].temp.day]
